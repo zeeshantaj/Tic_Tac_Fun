@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         String uid = "2131f";
         reference
                 .child(uid)
-                .child("accepted");
+                .child("isAccepted")
+                .child("playerx")
+                .child("playerO");
 
     }
 
