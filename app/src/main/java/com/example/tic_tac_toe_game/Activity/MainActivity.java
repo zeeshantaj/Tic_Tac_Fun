@@ -25,12 +25,14 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         DatabaseReference reference = database.getReference("RequestToConnect");
-
-
+        String uid = "2131f";
+        reference
+                .child(uid)
+                .child("accepted");
 
     }
 
-    protected void startGame(){
+    private void requestForPlayer(){
 
     }
 }
