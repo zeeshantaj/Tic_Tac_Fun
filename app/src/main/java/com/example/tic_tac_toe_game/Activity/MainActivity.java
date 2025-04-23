@@ -22,21 +22,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+    
+        requestForPlayer();
+    }
+
+    private void requestForPlayer(){
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         DatabaseReference reference = database.getReference("RequestToConnect");
         String uid = "2131f";
         reference
                 .child(uid)
                 .child("isAccepted")
-            .child("senderUID")
-            .child("receiverUID")
+                .child("senderUID")
+                .child("receiverUID")
                 .child("playerx")
                 .child("playerO");
-
-    }
-
-    private void requestForPlayer(){
-
     }
 }
