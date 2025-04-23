@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         reference
                 .child(uid)
                 .child("isAccepted")
+            .child("senderUID")
+            .child("receiverUID")
                 .child("playerx")
                 .child("playerO");
 
